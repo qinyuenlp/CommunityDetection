@@ -44,36 +44,7 @@ def modularity(partition, graph, weight='weight'):
     return community.modularity(partition, graph, weight)
 
 def ARI(partition, real_partition):
-    """ Compute the Adjusted Rand Index"""
-    n = len(partition)
-    distinct = set(partition)
-    real_distinct = set(real_partition)
-    communities = to_community(distinct, partition)
-    real_communities = to_community(real_distinct, real_partition)
-
-    union = list()
-    intersection = list()
-    for real_community in real_communities:
-        for community in communities:
-            intersection += real_community & community
-            union += real_community | community
-    union = list(set(union))
-    for node in intersection:
-        union.remove(node)
-    a11 = len(intersection)
-    num_in_real = len([node for node in union if node in real_communities])
-    num_not_in_real = len(union) - num_in_real
-    a10 = num_in_real
-    a01 = num_not_in_real
-    a00 = (n**2 - n)/2 - (a11 + a10 + a01)
-
-    numerator = (a11 + a01) * (a11 + a10) / a00
-    denominator1 = (2 * a11 + a01 + a10) / 2
-    denominator2 = (a11 + a01) * (a11 + a10) / a00
-
-    test = numerator / (denominator1 + denominator2)
-    return a11 - numerator / (denominator1 + denominator2)
-
+    pass
 
 def to_community(distinct, partition):
     """ Turn partition(a list) to list of communities(a list of sets)"""
