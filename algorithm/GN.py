@@ -1,5 +1,7 @@
 # -*- coding:utf-8 -*-
 '''
+Reference
+
 Paper
 ------------
 Girvan M, Newman M E J. Community structure in social and biological networks[J]. Proceedings of the National Academy of
