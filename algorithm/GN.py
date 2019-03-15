@@ -5,14 +5,8 @@ Girvan M, Newman M E J. Community structure in social and biological networks[J]
 '''
 import networkx as nx
 import community as cm
-
 import copy
 
-# class GN:
-#     def __init__(self, G):
-#         self._G = copy.deepcopy(G)
-#         self._G0 = G
-#         self._num_edges = G.number_of_edges()
 
 def all_results(G):
     results = []
