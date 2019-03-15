@@ -1,20 +1,19 @@
 # -*- coding:utf-8 -*-
 '''
-参考文献:
+Reference
+
+Paper
+--------
 Luxburg U V. A tutorial on spectral clustering[J]. Statistics and Computing, 2007, 17(4): 395-416
 
-参考博客:
+Blog
+--------
 https://blog.csdn.net/waleking/article/details/7584084
 '''
 import networkx as nx
 import numpy as np
 from sklearn.cluster import KMeans
 import scipy.linalg as linalg
-
-# class SpectralClustering:
-#     def __init__(self, G, k):
-#         self.G = G
-#         self.k = k
 
 def partition(G, k, normalized=False):
     A = nx.to_numpy_array(G)
