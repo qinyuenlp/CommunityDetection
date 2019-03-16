@@ -2,7 +2,7 @@
 [![Python](https://img.shields.io/badge/Python-3.6-blue.svg)](https://www.python.org/)
 [![field](https://img.shields.io/badge/Field-Complex%20Network-brightgreen.svg)](https://en.wikipedia.org/wiki/Community_structure)  
 该项目为本人研究社区发现时的部分实验代码，基于```networkx```，统一输入与输出格式之后将其整理到此处。  
-**\*其中部分工作非本人原创，在下述描述部分已给出相应的代码参考链接，在此衷心感谢网友们无私的分享。**  
+**\*其中部分代码借鉴了网友的分享，在下述描述部分已给出相应的代码参考链接。**  
 
 ## 项目内容（已发布）
 社区发现算法 | 参考文献 | 代码参考链接
