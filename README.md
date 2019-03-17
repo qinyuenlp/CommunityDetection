@@ -14,4 +14,7 @@ Spectral Clustering | [《A tutorial on spectral clustering》](https://arxiv.or
 
 
 ### 社区发现评价指标
-#### 模块度(Modularity)
+#### 1. 模块度(Modularity)
+![modularity](https://github.com/QinY-Stat/CommunityDetection/blob/master/images/modularity.png)  
+其中m为图的边数，A为图的邻接矩阵，ki表示节点i的度，
+      
