@@ -9,6 +9,7 @@
 以美国大学橄榄球联盟的比赛数据集(football)为例，将该网络划分为12个社区  
 ```
 from CommunityDetection import algorithm
+
 filepath = r'.\football.gml'
 
 G = nx.read_gml(filepath)
