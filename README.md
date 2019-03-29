@@ -6,13 +6,13 @@
 △.受限于学术水平与编程能力，若代码有错误或不足之处，欢迎朋友们的指正！  
 △.**目前上传的算法大多为早期经典算法，未来在适当的时候会上传一些近期文献所提出的算法。**  
 ## 使用示例
-以美国大学橄榄球联盟的比赛数据集(football)为例  
+以美国大学橄榄球联盟的比赛数据集(football)为例，将该网络划分为12个社区  
 ```
 from CommunityDetection import algorithm
 filepath = r'.\football.gml'
 
 G = nx.read_gml(filepath)
-k = 9
+k = 12
 sc_com = algorithm.SpectralClustering.partition(G, k)  # 谱聚类
 GN_com = algorithm.GN.partition(G)  # GN算法
 print(sc_com)
