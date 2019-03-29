@@ -51,8 +51,7 @@ if __name__ == '__main__':
     G = nx.read_gml(filepath)
     k = 9
     a = partition(G, k)
-    b = a.partition()
-    print(b)
+    print(a)
 
 
 
