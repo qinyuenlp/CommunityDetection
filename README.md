@@ -19,7 +19,7 @@ print(sc_com)
 print(GN_com)
 ```
 将结果进行可视化后，得到下图  
-![SpectralClustering]()
+![SpectralClustering](https://github.com/QinY-Stat/CommunityDetection/blob/master/images/spectral%20clustering.png)
 ## 内容
 ### 社区发现算法
 算法名称 | 参考文献 | 代码参考链接
