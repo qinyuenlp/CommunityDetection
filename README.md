@@ -5,6 +5,20 @@
 △.将这些代码分享出来，一是为了给刚刚进行复杂网络社区发现相关研究的朋友带来一些便利，二是以备日后不时之需。  
 △.受限于学术水平与编程能力，若代码有错误或不足之处，欢迎朋友们的指正！  
 △.**目前上传的算法大多为早期经典算法，未来在适当的时候会上传一些近期文献所提出的算法。**  
+## 使用方式
+```
+from CommunityDetection import algorithm
+filepath = r'.\LoadData.gml'
+
+G = nx.read_gml(filepath)
+k = 9
+sc_com = algorithm.SpectralClustering.partition(G, k)  # 谱聚类
+GN_com = algorithm.GN.partition(G)  # GN算法
+print(sc_com)
+print(GN_com)
+```
+将结果可视化得到下图
+![SpectralClustering](https://github.com/QinY-Stat/CommunityDetection/blob/master/images/spectral%20clustering.png)
 ## 内容
 ### 社区发现算法
 算法名称 | 参考文献 | 代码参考链接
