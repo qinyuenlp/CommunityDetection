@@ -12,11 +12,11 @@ https://blog.csdn.net/waleking/article/details/7584084
 
 Example
 ----------
->>>  filepath = r'.\LoadData.gml'
->>>  G = nx.read_gml(filepath)
->>>  k = 9
->>>  a = partition(G, k)
->>>  print(a)
+>  filepath = r'.\LoadData.gml'
+>  G = nx.read_gml(filepath)
+>  k = 9
+>  a = partition(G, k)
+>  print(a)
 '''
 import networkx as nx
 import numpy as np
@@ -50,3 +50,10 @@ def degree_matrix(G):
         d_node = G.degree(node)
         D[i][i] = d_node
     return np.array(D)
+
+if __name__ == '__main__':
+    filepath = r'.\football.gml'
+    
+    G = nx.read_gml(filepath)
+    k = 12
+    a = partition(G, k)
