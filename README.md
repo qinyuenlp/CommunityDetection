@@ -22,10 +22,31 @@ print(GN_com)
 
 # 可视化
 pos = nx.spring_layout(G)
-nx.draw(G, pos, with_labels=False, node_size=50, width=0.5, node_color=sc_com)
+nx.draw(G, pos, with_labels=False, node_size=70, width=0.5, node_color=sc_com)
 plt.show()
 ```
-将结果进行可视化后，得到下图  
+结果可得到下图  
+![SpectralClustering_ori](https://github.com/QinY-Stat/CommunityDetection/blob/master/images/spectral%20clustering_origin.png)
+上图所展示的是在**原Graph的拓扑结构下**，利用颜色对不同社区的节点加以区分。但如果想达到**同社区节点联系紧密，不同社区节点联系稀疏**的效果，则在获取社区划分(以谱聚类结果sc_com为例)后，还需要进行以下操作:  
+```
+# 获取每个社区所包含的节点
+V = [node for node in G.nodes()]
+com_dict = {node:com for node, com in zip(V, a)}
+com = [[V[i] for i in range(G.number_of_nodes()) if a[i] == j] for j in range(k)]
+
+# 构造可视化所需要的图
+G_graph = nx.Graph()
+for each in com:
+  G_graph.update(nx.subgraph(G, each))  # 
+color = [com_dict[node] for node in G_graph.nodes()]
+
+# 可视化
+pos = nx.spring_layout(G_graph, seed=4, k=0.33)
+nx.draw(G, pos, with_labels=False, node_size=1, width=0.1, alpha=0.2)
+nx.draw(G_graph, pos, with_labels=True, node_color=color, node_size=70, width=0.5, font_size=5, font_color='#000000')
+plt.show()
+```
+结果得到下图  
 ![SpectralClustering](https://github.com/QinY-Stat/CommunityDetection/blob/master/images/spectral%20clustering.png)
 ## 内容
 ### 社区发现算法
