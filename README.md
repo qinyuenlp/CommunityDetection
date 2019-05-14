@@ -5,18 +5,25 @@
 △.将这些代码分享出来，一是为了给刚刚进行复杂网络社区发现相关研究的朋友带来一些便利，二是以备日后不时之需。  
 △.受限于学术水平与编程能力，若代码有错误或不足之处，欢迎朋友们的指正！  
 ## 使用示例
-以美国大学橄榄球联盟的比赛数据集(football)为例，将该网络划分为12个社区  
+以美国大学橄榄球联盟的比赛数据集(football)为例，将该网络划分为12个社区，并可视化  
 ```
 from CommunityDetection import algorithm
+from matplotlib import pyplot as plt
 
 filepath = r'.\football.gml'
 
+# 获取社区划分
 G = nx.read_gml(filepath)
 k = 12
 sc_com = algorithm.SpectralClustering.partition(G, k)  # 谱聚类
 GN_com = algorithm.GN.partition(G)  # GN算法
 print(sc_com)
 print(GN_com)
+
+# 可视化
+pos = nx.spring_layout(G)
+nx.draw(G, pos, with_labels=False, node_size=50, width=0.5, node_color=sc_com)
+plt.show()
 ```
 将结果进行可视化后，得到下图  
 ![SpectralClustering](https://github.com/QinY-Stat/CommunityDetection/blob/master/images/spectral%20clustering.png)
