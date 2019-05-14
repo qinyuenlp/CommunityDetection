@@ -26,7 +26,7 @@ nx.draw(G, pos, with_labels=False, node_size=70, width=0.5, node_color=sc_com)
 plt.show()
 ```
 结果可得到下图  
-![SpectralClustering_ori](https://github.com/QinY-Stat/CommunityDetection/blob/master/images/spectral%20clustering_origin.png)
+![SpectralClustering_ori](https://github.com/QinY-Stat/CommunityDetection/blob/master/images/spectral%20clustering_ori.png)  
 上图所展示的是在**原Graph的拓扑结构下**，利用颜色对不同社区的节点加以区分。但如果想达到**同社区节点联系紧密，不同社区节点联系稀疏**的效果，则在获取社区划分(以谱聚类结果sc_com为例)后，还需要进行以下操作:  
 ```
 # 获取每个社区所包含的节点
