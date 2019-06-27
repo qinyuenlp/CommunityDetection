@@ -31,8 +31,8 @@ plt.show()
 ```
 # 获取每个社区所包含的节点
 V = [node for node in G.nodes()]
-com_dict = {node:com for node, com in zip(V, a)}
-com = [[V[i] for i in range(G.number_of_nodes()) if a[i] == j] for j in range(k)]
+com_dict = {node:com for node, com in zip(V, sc_com)}
+com = [[V[i] for i in range(G.number_of_nodes()) if sc_com[i] == j] for j in range(k)]
 
 # 构造可视化所需要的图
 G_graph = nx.Graph()
