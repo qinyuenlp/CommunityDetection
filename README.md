@@ -53,7 +53,7 @@ plt.show()
 算法名称 | 参考文献 | 代码参考链接 | 相关说明
 ---- | ---- | ---- | ----
 GN(Girvan&Newman) | [《Community structure in social and biological networks》](https://arxiv.org/abs/cond-mat/0112110) | [zzz24512653](https://github.com/zzz24512653/CommunityDetection/blob/master/algorithm/GN.py) | -
-Spectral Clustering | [《A tutorial on spectral clustering》](https://arxiv.org/abs/0711.0189) | [waleking](https://blog.csdn.net/waleking/article/details/7584084) | [推导](https://github.com/TUFE-I307/Seminar-MachineLearning/谱聚类)
+Spectral Clustering | [《A tutorial on spectral clustering》](https://arxiv.org/abs/0711.0189) | [waleking](https://blog.csdn.net/waleking/article/details/7584084) | [推导](https://github.com/TUFE-I307/Seminar-MachineLearning/tree/master/谱聚类)
 
 
 ### 社区发现评价指标
