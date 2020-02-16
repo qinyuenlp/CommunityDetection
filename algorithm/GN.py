@@ -19,7 +19,7 @@ def all_results(G):
         betweenness_dict = nx.edge_betweenness_centrality(G)
         edge_max_betweenness = max(betweenness_dict.items(), key=lambda x:x[1])[0]
         G.remove_edge(edge_max_betweenness[0], edge_max_betweenness[1])
-        community = [list(subgraph) for subgraph in list(nx.connected_component_subgraphs(G))]
+        community = [list(subgraph) for subgraph in nx.connected_components(G)]
         community_dict = {node:0 for node in G.nodes()}
         for i in range(len(community)):
             each = community[i]
@@ -35,7 +35,7 @@ def partition(G):
     max_modularity = max(modularities)
     max_index = modularities.index(max_modularity)
     max_result = results[max_index]
-    return list(max_result.values()), max_modularity
+    return list(max_result.values())
 
 if __name__ == '__main__':
 
