@@ -35,15 +35,16 @@ def partition(G):
     max_modularity = max(modularities)
     max_index = modularities.index(max_modularity)
     max_result = results[max_index]
-    return list(max_result.values())
+    return list(max_result.values()), max_modularity
 
 if __name__ == '__main__':
 
-    filepath = r'.\LoadData.gml'
+    filepath = r'../data/karate_club.gml'
 
     G = nx.read_gml(filepath)
     community, modularity = partition(G)
     print(community)
+    print(modularity)
 
 
 

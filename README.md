@@ -95,6 +95,7 @@ Spectral Clustering | [《A tutorial on spectral clustering》](https://arxiv.or
 ### 社区发现评价指标
 #### 1. 模块度(Modularity)
 ![modularity](https://github.com/QinY-Stat/CommunityDetection/blob/master/images/modularity.png)  
+相关博客: [模块度发展历程](https://qinystat.gitee.io/2020/01/22/Modularity/)
 #### 2. 标准化互信息(Normalized Mutual Information(NMI))
 NMI代码参考链接：[bethansy](http://www.cnblogs.com/bethansy/p/6890972.html)
 ![NMI](https://github.com/QinY-Stat/CommunityDetection/blob/master/images/NMI.png)  
